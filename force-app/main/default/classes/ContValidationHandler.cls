@@ -9,7 +9,7 @@ public with sharing class ContValidationHandler {
         }
 
         //List<Contact> contList = [SELECT Id, AccountId FROM Contact WHERE AccountId= :cnt.AccountId];
-        set<Id> allCntId = [SELECT Id, AccountId FROM Contact WHERE AccountId = :cntIds];
+        set<Id> allCntId = [SELECT Id, AccountId, Name FROM Contact WHERE AccountId = :cntIds];
         if (allCntId) {
             
         }
